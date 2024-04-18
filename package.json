@@ -1,0 +1,48 @@
+{
+  "name": "google-drive-clone-be",
+  "version": "1.0.0",
+  "description": "NodeJS backend for URL shortener",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravikiran-fullstack/url-shortener-back-end.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Ravikiran Yadava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravikiran-fullstack/url-shortener-back-end/issues"
+  },
+  "homepage": "https://github.com/ravikiran-fullstack/url-shortener-back-end#readme",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.4.1",
+    "@aws-sdk/s3-request-presigner": "^3.4.1",
+    "base-64": "^1.0.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "googleapis": "^66.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.9",
+    "nanoid": "^3.1.20",
+    "nodemailer": "^6.4.17",
+    "pngenerator": "^2.1.2",
+    "url-exists-deep": "^2.0.10",
+    "valid-url": "^1.0.9",
+    "yup": "^0.32.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
