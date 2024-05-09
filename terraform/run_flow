@@ -1,0 +1,9 @@
+vpc
+subnets
+security_groups
+eks_cluster
+eks_cluster_iam_role
+eks_cluster_security_group
+eks_node_group
+eks_node_iam_role
+eks_node_security_group
