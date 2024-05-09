@@ -1,0 +1,48 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: staging
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guardian
+  namespace: staging
+  labels:
+    app: guardian
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: guardian
+  template:
+    metadata:
+      labels:
+        app: guardian
+    spec:
+      containers:
+        - name: guardian
+          image: 959772495973.dkr.ecr.us-east-1.amazonaws.com/guardian:latest
+          ports:
+            - name: http
+              containerPort: 8080
+          resources:
+            requests:
+              memory: 64Mi
+              cpu: 100m
+            limits:
+              memory: 128Mi
+              cpu: 300m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: guardian
+  namespace: staging
+spec:
+  selector:
+    app: guardian
+  ports:
+    - protocol: TCP
+      port: 8080
