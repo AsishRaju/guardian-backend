@@ -32,5 +32,7 @@ jobs:
           REPOSITORY: ${{ secrets.AWS_ECR_REPO }}
           IMAGE_TAG: ${{ github.sha }}
         run: |
+          echo $REGISTRY
+          echo $REPOSITORY
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
