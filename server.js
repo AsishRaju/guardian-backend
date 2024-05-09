@@ -129,5 +129,5 @@ app.get("/favicon.ico", (req, res) => {
 
 // Route to show home page
 app.get("/", (req, res) => {
-  res.send({ msg: "hello" });
+  res.send({ msg: "HELLO FROM ONE OF THE POD" });
 });
