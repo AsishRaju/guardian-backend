@@ -1,7 +1,7 @@
 name: Cypress Docker Push
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
 
 jobs:
   Cypress-Test:
